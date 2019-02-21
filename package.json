@@ -1,5 +1,6 @@
 {
   "name": "tic-tac-toe-react",
+  "homepage": "https://andreas-just.github.io/tic-tac-toe-react/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
