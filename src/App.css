@@ -1,33 +1,103 @@
-.App {
-  text-align: center;
+body {
+  background-color: linen;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 500px;
+  margin: 80px auto;
+  background-color: #d8e6d6;
+  border-radius: 20px;
+}
+.container__header {
+  width: 100vw;
+  padding: 30px 0;
+  font-size: 30px;
+  text-align: center;
   color: white;
+  background-color: darkslategray;
 }
-
-.App-link {
-  color: #61dafb;
+.container__play-field {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  margin: 30px auto;
+  border-collapse: collapse;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container__cell {
+  flex-basis: 96px;
+  height: 96px;
+  text-align: center;
+  font-family: inherit;
+  font-size: 70px;
+  border: 2px solid #004105;
+  cursor: pointer;
+}
+.container__cell--top {
+  border-top: none;
+}
+.container__cell--bottom {
+  border-bottom: none;
+}
+.container__cell--right {
+  border-right: none;
+}
+.container__cell--left {
+  border-left: none;
+}
+.container__row:first-child .container__cell {
+  border-top: none;
+}
+.container__row:last-child .container__cell {
+  border-bottom: none;
+}
+.container__row .container__cell:first-child {
+  border-left: none;
+}
+.container__row .container__cell:last-child {
+  border-right: none;
+}
+.container__message {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  display: none;
+  width: 200px;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  background-color: rgba(205, 133, 63, 0.8);
+  border-radius: 5px;
+  transform: translate(-50%, -20%);
+}
+.container__btn {
+  width: 100%;
+  height: 80px;
+  padding: 0;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 2px;
+  word-spacing: 10px;
+  text-transform: uppercase;
+  color: #004105;
+  background-color: #d5d5d5;
+  border: none;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transition: all 500ms;
+}
+.container__btn:focus {
+  outline: none;
+}
+.container__btn:hover {
+  background-color: #e5e5e5;
+  box-shadow: 0 5px 10px #ccc;
+}
+.container__btn:active {
+  background-color: #eee;
+  box-shadow: inset 0 5px 10px #ccc;
 }
